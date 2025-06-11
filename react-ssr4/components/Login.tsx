@@ -5,7 +5,7 @@ const Home = ({ store }: any) => {
   }, []);
   return (
     <div>
-      <div>This is Login</div>
+      <div>This is Login 1111</div>
       <button onClick={log}>Click me</button>
     </div>
   )

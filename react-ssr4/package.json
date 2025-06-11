@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "esno server/index.tsx",
+    "start": "pnpm build && esno server/index.tsx",
     "build": "webpack"
   },
   "keywords": [],

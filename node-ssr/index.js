@@ -14,6 +14,22 @@ app.get('/', function(req, res) {
     `);
 });
 
+app.set('view engine', 'ejs');
+
+// 路由
+app.get('/ejs', (req, res) => {
+  const data = {
+    title: 'EJS Demo',
+    message: 'Hello from EJS!',
+    items: ['Apple', 'Banana', 'Cherry'],
+    user: {
+      name: 'John Doe',
+      age: 30
+    }
+  };
+  res.render('index', data);
+});
+
 app.listen(3001, function() {
     console.log('listen:3001');
 });

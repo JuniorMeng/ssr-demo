@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server';
 //重要是要用到StaticRouter
 import { StaticRouter } from 'react-router-dom'; 
 import React from 'react'
-import createStore from '../client/store';
+import createStore from '../shared/store';
 
 export const render = (req: any) => {
   const store = createStore();
@@ -13,6 +13,8 @@ export const render = (req: any) => {
       <App store={store} />
     </StaticRouter>
   );
+
+  // const preloadedState = store.getState();
   return `
     <html>
       <head>

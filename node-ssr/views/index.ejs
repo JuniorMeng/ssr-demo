@@ -1,0 +1,21 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= message %></h1>
+  
+  <h2>User Info</h2>
+  <p>Name: <%= user.name %></p>
+  <p>Age: <%= user.age %></p>
+  
+  <h2>Fruits</h2>
+  <ul>
+    <% items.forEach(item => { %>
+      <li><%= item %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>

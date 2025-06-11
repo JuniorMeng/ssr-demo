@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import App from '../shared/App'
-import createStore from './store';
+import createStore from '../shared/store';
 
-//@ts-expect-error
-const store = createStore(window.__PRELOADED_STATE__);
+const store = createStore();
 
 // export const App = () => {
 //   return (
