@@ -1,22 +1,13 @@
 import React, { useCallback, useEffect } from 'react';
-
 const Home = ({ store }: any) => {
-  const { getUserInfo } = store();
-  const { userInfo } = store.getState();
-  console.log('Home userInfo', userInfo);
-
+  const { getUserInfo, userInfo } = store();
   const log = useCallback(() => {
     console.log('Hello world 22222');
   }, []);
 
-  // useEffect(() => {
-  //   getUserInfo()
-  // }, []);
-
-//  async function _getUserInfo() {
-//    return await store.getState().getUserInfo()
-//  }
-
+  useEffect(() => {
+     getUserInfo()
+  }, []);
   return (
     <div>
       <div>This is Home222</div>
@@ -27,11 +18,4 @@ const Home = ({ store }: any) => {
     </div>
   )
 }
-
-Home.loadData = (store: any) => {
-  return store.getState().getUserInfo()
-  // const { getUserInfo } = store();
-  // return getUserInfo
-}
-
 export default Home

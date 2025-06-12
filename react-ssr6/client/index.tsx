@@ -4,7 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 import App from '../shared/App'
 import createStore from '../shared/store';
 
-const store = createStore();
+// @ts-ignore
+const store = createStore(window.__INITIAL_STATE__);
 
 // export const App = () => {
 //   return (

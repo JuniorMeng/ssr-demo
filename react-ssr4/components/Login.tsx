@@ -1,11 +1,11 @@
 import React, { useCallback } from 'react';
-const Home = ({ store }: any) => {
+const Home = () => {
   const log = useCallback(() => {
     console.log('Hello world');
   }, []);
   return (
     <div>
-      <div>This is Login 1111</div>
+      <div>This is Login</div>
       <button onClick={log}>Click me</button>
     </div>
   )

@@ -1,13 +1,21 @@
 import express from 'express';
-import {render} from './utils';
+import { renderToString } from 'react-dom/server';
+import React from 'react';
+
+import Home from '../components/Home';
 
 const app = express();
-app.use(express.static('static'));
-//注意这里要换成*来匹配
-app.get('*', function (req, res) {
-   res.send(render(req));
+
+app.get('/', (_: unknown, res: express.Response) => {
+    res.send(
+        ` <div id="root">${renderToString(<Home />)}</div>
+          <script src="/bundle.js"></script>
+        `
+    );
 });
- 
-app.listen(4003, () => {
-  console.log('listen:4003')
+
+app.use(express.static('static'));
+
+app.listen(4002, () => {
+    console.log('Listening on port 4002');
 });

@@ -1,22 +1,14 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
-import App from '../shared/App'
-import createStore from '../shared/store';
+import Routes from '../Router'
 
-const store = createStore();
+export const App = () => {
+  return (
+    <BrowserRouter>
+      {Routes}
+    </BrowserRouter>
+  )
+}
 
-// export const App = () => {
-//   return (
-//     <BrowserRouter>
-//       <App store={store} />
-//     </BrowserRouter>
-//   )
-// }
-
-ReactDom.hydrate(
-  <BrowserRouter>
-    <App store={store} />
-  </BrowserRouter>,
-  document.getElementById('root')
-)
+ReactDom.hydrate(<App />, document.getElementById('root'))

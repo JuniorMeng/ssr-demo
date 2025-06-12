@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pnpm build && esno server/index.tsx",
+    "start": "esno server/index.tsx",
     "build": "webpack"
   },
   "keywords": [],
@@ -15,8 +15,7 @@
     "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.6.2",
-    "zustand": "^5.0.5"
+    "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.22.5",
