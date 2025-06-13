@@ -9,7 +9,7 @@ export default (initialState = {}) => {
     // logout: () => set({ isLoggedIn: false, username: '' })
     getUserInfo: async () => {
 
-      const res = await fetch('http://localhost:4004/api/getUserInfo');
+      const res = await fetch('http://localhost:4005/api/getUserInfo');
       const userInfo = await res.json();
       console.log(userInfo)
       set({ userInfo });

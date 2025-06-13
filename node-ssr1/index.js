@@ -30,6 +30,6 @@ app.get('/ejs', (req, res) => {
   res.render('index', data);
 });
 
-app.listen(3001, function() {
-    console.log('listen:3001');
+app.listen(4001, function() {
+    console.log('listen:4001');
 });

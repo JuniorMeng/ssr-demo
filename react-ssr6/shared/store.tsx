@@ -8,7 +8,7 @@ export default (initialState = {}) => {
     // login: (username: any) => set({ isLoggedIn: true, username }),
     // logout: () => set({ isLoggedIn: false, username: '' })
     getUserInfo: async () => {
-      const res = await fetch('http://localhost:4005/api/getUserInfo');
+      const res = await fetch('http://localhost:4006/api/getUserInfo');
       const userInfo = await res.json();
       console.log('store userInfo', userInfo)
       set({ userInfo });

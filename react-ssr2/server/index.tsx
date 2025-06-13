@@ -13,6 +13,6 @@ app.get('/', (_: unknown, res: express.Response) => {
     );
 });
 
-app.listen(4001, () => {
-    console.log('Listening on port 4001');
+app.listen(4002, () => {
+    console.log('Listening on port 4002');
 });

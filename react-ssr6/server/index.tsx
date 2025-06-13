@@ -39,6 +39,6 @@ app.get('*', async(req, res) => {
   res.send(render(req, store));
 });
  
-app.listen(4005, () => {
-  console.log('listen:4005')
+app.listen(4006, () => {
+  console.log('listen:4006')
 });
