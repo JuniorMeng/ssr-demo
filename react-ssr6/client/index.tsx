@@ -5,7 +5,7 @@ import App from '../shared/App'
 import createStore from '../shared/store';
 
 // @ts-ignore
-const store = createStore(window.__INITIAL_STATE__);
+const store = createStore();
 
 // export const App = () => {
 //   return (

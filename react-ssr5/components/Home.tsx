@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 const Home = ({ store }: any) => {
   const { getUserInfo, userInfo } = store();
+  console.log("home", userInfo)
   const log = useCallback(() => {
     console.log('Hello world 22222');
   }, []);

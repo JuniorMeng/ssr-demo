@@ -22,9 +22,9 @@ export const render = (req: any, store: any) => {
         </head>
         <body>
           <div id="root">${content}</div>
-          <script>
-            window.__INITIAL_STATE__ = ${JSON.stringify(preloadedState)}
-          </script>
+          // <script>
+          //   window.__INITIAL_STATE__ = ${JSON.stringify(preloadedState)}
+          // </script>
           <script src="/bundle.js"></script>
         </body>
       </html>
