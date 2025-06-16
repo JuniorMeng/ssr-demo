@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom'
 import Routes from '../Router'
 
@@ -11,4 +11,4 @@ export const App = () => {
   )
 }
 
-ReactDom.hydrate(<App />, document.getElementById('root'))
+hydrateRoot(document.getElementById('root')!, <App />)

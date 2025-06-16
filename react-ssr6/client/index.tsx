@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom'
 import App from '../shared/App'
 import createStore from '../shared/store';
@@ -14,10 +14,7 @@ const store = createStore();
 //     </BrowserRouter>
 //   )
 // }
-
-ReactDom.hydrate(
-  <BrowserRouter>
-    <App store={store} />
-  </BrowserRouter>,
-  document.getElementById('root')
-)
+hydrateRoot(document.getElementById('root')!, 
+<BrowserRouter>
+  <App store={store} />
+</BrowserRouter>)
